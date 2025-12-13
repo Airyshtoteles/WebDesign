@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tugas 2 — Form Pemesanan UNIKU Hotel</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Tugas 2 — Form Pemesanan UNIKU Hotel</h1>
+    <div class="stepper">
+      <div class="step"><span class="num">1</span> <span>Pilih Kamar</span></div>
+      <div class="step"><span class="num">2</span> <span>Pilih Harga</span></div>
+      <div class="step"><span class="num">3</span> <span>Detail Pembayaran</span></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Wizard 3 langkah tanpa JS (radio-based) -->
+    <section class="card wizard">
+      <!-- state -->
+      <input type="radio" name="step" id="s1" checked>
+      <input type="radio" name="step" id="s2">
+      <input type="radio" name="step" id="s3">
+
+      <!-- nav -->
+      <div class="nav">
+        <label for="s1">Langkah 1: Pilih Kamar</label>
+        <label for="s2">Langkah 2: Pilih Harga</label>
+        <label for="s3">Langkah 3: Detail Pembayaran</label>
+      </div>
+
+      <div class="panels">
+        <!-- PANEL 1: PILIH KAMAR -->
+        <div class="panel" id="p1">
+          <div class="row" style="margin-bottom:8px">
+            <span class="badge">UNIKU Serenity Resort</span>
+            <label class="row" style="gap:6px">
+              <input type="checkbox"> Harga Khusus
+            </label>
+            <label class="row" style="gap:6px">
+              <input type="checkbox"> Gunakan Poin
+            </label>
+          </div>
+
+          <div class="rooms">
+            <article class="room">
+              <div class="media"></div>
+              <div class="body">
+                <h4>Kamar Deluxe dengan Tempat Tidur King</h4>
+                <div class="price">Rp. 1.861.200</div>
+                <div class="actions">
+                  <label class="row" style="gap:6px"><input type="radio" name="room" checked> Pilih</label>
+                  <label for="s2" class="btn">Pesan</label>
+                </div>
+              </div>
+            </article>
+            <article class="room">
+              <div class="media"></div>
+              <div class="body">
+                <h4>Kamar Executive dengan Pemandangan Alam</h4>
+                <div class="price">Rp. 1.964.200</div>
+                <div class="actions">
+                  <label class="row" style="gap:6px"><input type="radio" name="room"> Pilih</label>
+                  <label for="s2" class="btn">Pesan</label>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- PANEL 2: PILIH HARGA -->
+        <div class="panel" id="p2">
+          <div class="row" style="margin-bottom:8px">
+            <label>Lama Menginap
+              <select class="input">
+                <option>1 Malam</option>
+                <option>2 Malam</option>
+                <option>3 Malam</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="prices">
+            <div class="price-card">
+              <div class="title">Harga Terbaik yang tersedia</div>
+              <div class="big">Rp. 1.980.000</div>
+              <div style="margin-top:6px" class="row">
+                <a href="#" class="btn secondary">Detail harga</a>
+                <label for="s3" class="btn">Pilih</label>
+              </div>
+            </div>
+            <div class="price-card">
+              <div class="title">Member Special</div>
+              <div class="big">Rp. 1.861.200</div>
+              <div style="margin-top:6px" class="row">
+                <a href="#" class="btn secondary">Diskon Member</a>
+                <label for="s3" class="btn">Pilih</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="prices" style="margin-top:10px">
+            <div class="price-card">
+              <div class="title">Termasuk Sarapan</div>
+              <div class="big">Rp. 2.020.000</div>
+              <div style="margin-top:6px" class="row">
+                <a href="#" class="btn secondary">Detail harga</a>
+                <label for="s3" class="btn">Pilih</label>
+              </div>
+            </div>
+            <div class="price-card">
+              <div class="title">Diskon Member</div>
+              <div class="big">Rp. 2.081.200</div>
+              <div style="margin-top:6px" class="row">
+                <a href="#" class="btn secondary">Detail harga</a>
+                <label for="s3" class="btn">Pilih</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PANEL 3: DETAIL PEMBAYARAN -->
+        <div class="panel" id="p3">
+          <div class="card" style="margin-bottom:10px">
+            <div class="summary">
+              <div class="thumb"></div>
+              <div class="txt">
+                <div><strong>Kamar Deluxe</strong> — dengan Tempat Tidur King</div>
+                <div class="price">Rp. 2.081.200 • termasuk pajak</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid">
+            <div class="card">
+              <h3>Pembayaran</h3>
+              <div class="form">
+                <div class="field span-2">
+                  <label>Nomor Kartu</label>
+                  <input class="input" type="text" placeholder="0000 0000 0000 0000" />
+                </div>
+                <div class="field">
+                  <label>Bulan</label>
+                  <input class="input" type="text" placeholder="MM" />
+                </div>
+                <div class="field">
+                  <label>Tahun</label>
+                  <input class="input" type="text" placeholder="YY" />
+                </div>
+                <div class="field span-2">
+                  <label>Nama Depan</label>
+                  <input class="input" type="text" />
+                </div>
+                <div class="field span-2">
+                  <label>Nama Belakang</label>
+                  <input class="input" type="text" />
+                </div>
+                <div class="field span-2">
+                  <label>Email</label>
+                  <input class="input" type="email" />
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <h3>Informasi Tamu</h3>
+              <div class="form">
+                <div class="field span-2">
+                  <label>Wilayah</label>
+                  <select class="input"><option>Negara/Wilayah</option></select>
+                </div>
+                <div class="field span-2">
+                  <label>Alamat</label>
+                  <input class="input" type="text" placeholder="Alamat 1" />
+                </div>
+                <div class="field span-2">
+                  <input class="input" type="text" placeholder="Alamat 2 (opsional)" />
+                </div>
+                <div class="field">
+                  <label>Kota</label>
+                  <input class="input" type="text" />
+                </div>
+                <div class="field">
+                  <label>Kode Pos</label>
+                  <input class="input" type="text" />
+                </div>
+                <div class="field span-2">
+                  <label>Preferensi</label>
+                  <textarea class="input" rows="3" placeholder="Permintaan khusus (tanpa hewan peliharaan, dll)"></textarea>
+                </div>
+                <div class="field span-2">
+                  <label class="row" style="gap:8px"><input type="checkbox"> Saya setuju dengan Syarat & Ketentuan</label>
+                </div>
+                <div class="field span-2">
+                  <button class="btn" type="button">Reservasi Pemesanan</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tambah Data: a) Data kamar -->
+    <h2 class="section-title">3a. Form Tambah Data — Data Kamar</h2>
+    <section class="card">
+      <form class="form">
+        <div class="field"><label>ID Kamar</label><input class="input" type="text" placeholder="KMR-001" /></div>
+        <div class="field"><label>Jenis Kamar</label><select class="input"><option>Deluxe</option><option>Suite</option><option>Standard</option></select></div>
+        <div class="field span-2"><label>Gambar Ruangan (URL)</label><input class="input" type="url" placeholder="https://…" /></div>
+        <div class="field"><label>Harga (Rp)</label><input class="input" type="number" /></div>
+        <div class="field span-2"><label>Fasilitas</label><input class="input" type="text" placeholder="AC, Wifi, TV, Sarapan" /></div>
+        <div class="field span-2"><button class="btn" type="submit">Simpan</button></div>
+      </form>
+    </section>
+
+    <!-- Tambah Data: b) Fasilitas -->
+    <h2 class="section-title">3b. Form Tambah Data — Fasilitas</h2>
+    <section class="card">
+      <form class="form">
+        <div class="field"><label>ID</label><input class="input" type="text" placeholder="FAS-01" /></div>
+        <div class="field"><label>Nama</label><input class="input" type="text" placeholder="Kolam Renang" /></div>
+        <div class="field"><label>Harga Weekend</label><input class="input" type="number" /></div>
+        <div class="field"><label>Harga Weekday</label><input class="input" type="number" /></div>
+        <div class="field"><label>Kuota</label><input class="input" type="number" /></div>
+        <div class="field"><label>Jam Buka</label><input class="input" type="time" /></div>
+        <div class="field"><label>Jam Tutup</label><input class="input" type="time" /></div>
+        <div class="field span-2"><label>Fasilitas (deskripsi)</label><textarea class="input" rows="3"></textarea></div>
+        <div class="field span-2"><button class="btn" type="submit">Simpan</button></div>
+      </form>
+    </section>
+
+    <!-- c) Login Admin -->
+    <h2 class="section-title">3c. Form Login Admin</h2>
+    <section class="card">
+      <form class="form">
+        <div class="field"><label>Username</label><input class="input" type="text" /></div>
+        <div class="field"><label>Password</label><input class="input" type="password" /></div>
+        <div class="field span-2"><button class="btn" type="submit">Login</button></div>
+      </form>
+    </section>
+
+    <!-- d) Registrasi & Login Member -->
+    <h2 class="section-title">3d. Form Registrasi Member</h2>
+    <section class="card">
+      <form class="form">
+        <div class="field"><label>Nama</label><input class="input" type="text" /></div>
+        <div class="field"><label>Email</label><input class="input" type="email" /></div>
+        <div class="field"><label>Telepon</label><input class="input" type="tel" /></div>
+        <div class="field"><label>Password</label><input class="input" type="password" /></div>
+        <div class="field"><label>Konfirmasi</label><input class="input" type="password" /></div>
+        <div class="field span-2"><button class="btn" type="submit">Daftar</button></div>
+      </form>
+    </section>
+
+    <h2 class="section-title">3d. Form Login Member</h2>
+    <section class="card">
+      <form class="form">
+        <div class="field"><label>Email</label><input class="input" type="email" /></div>
+        <div class="field"><label>Password</label><input class="input" type="password" /></div>
+        <div class="field span-2"><button class="btn" type="submit">Login</button></div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
