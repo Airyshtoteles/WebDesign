@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrasi Member</title>
+    <link rel="stylesheet" href="<?= base_url('css/admin-style.css') ?>">
+</head>
+<body>
+    <div class="form-container">
+        <form action="<?= base_url('auth/register/store') ?>" method="POST">
+            <h2>Registrasi Member</h2>
+            
+            <div class="form-group">
+                <label for="nama_lengkap">Nama Lengkap</label>
+                <input type="text" id="nama_lengkap" name="nama_lengkap" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            
+             <div class="form-group">
+                <label for="konfirmasi_password">Konfirmasi Password</label>
+                <input type="password" id="konfirmasi_password" name="konfirmasi_password" required>
+            </div>
+            
+            <button type="submit" class="btn-submit">Daftar</button>
+
+            <p class="form-link">
+                Sudah punya akun? <a href="<?= base_url('auth/login') ?>">Login di sini</a>
+            </p>
+        </form>
+    </div>
+</body>
+</html>
