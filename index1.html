@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pemesanan Hotel</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+    <div class="booking-container">
+
+        <div class="booking-panel">
+            <div class="panel-header">
+                <h2>Langkah 1 dari 3</h2>
+                <h1>Pilih Kamar</h1>
+            </div>
+4
+            <div class="info-box">
+                <p>Masa inap Anda di Uniku Serenity resort mencakup</p>
+                <ul>
+                    <li>Restoran dalam hotel</li>
+                    <li>Kolam luar ruangan</li>
+                    <li>Pusat kebugaran</li>
+                </ul>
+            </div>
+            
+            <div class="room-options">
+                <div class="room-card">
+                    <img src="https://via.placeholder.com/300x120/cccccc/969696?text=Gambar+Kamar" alt="Kamar Deluxe">
+                    <div class="room-card-content">
+                        <h3>Kamar Delux dengan Tempat Tidur King</h3>
+                        <a href="#">Lihat detail</a>
+                        <div class="rating">★★★★☆</div>
+                        <div class="price">Rp. 1.861.200</div>
+                        <button class="btn">Pesan</button>
+                    </div>
+                </div>
+
+                <div class="room-card">
+                    <img src="https://via.placeholder.com/300x120/cccccc/969696?text=Gambar+Kamar" alt="Kamar Executive">
+                    <div class="room-card-content">
+                        <h3>Kamar Executive dengan Pemandangan Alam</h3>
+                        <a href="#">Lihat detail</a>
+                        <div class="rating">★★★★★</div>
+                        <div class="price">Rp. 1.964.200</div>
+                        <button class="btn">Pesan</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="booking-panel">
+            <div class="panel-header">
+                <h2>Langkah 2 dari 3</h2>
+                <h1>Pilih Harga</h1>
+            </div>
+
+            <div class="price-options">
+                <div class="price-card selected">
+                    <h3>Harga Terbaik yang tersedia</h3>
+                    <p class="original-price">Rp 2.200.000</p>
+                    <a href="#" class="detail-link">Detail harga</a>
+                    <div class="final-price">Rp 1.980.000</div>
+                    <button class="btn">Pilih</button>
+                </div>
+
+                <div class="price-card">
+                    <h3>Diskon Member</h3>
+                    <p class="original-price">Rp 2.200.000</p>
+                    <a href="#" class="detail-link">Detail harga</a>
+                    <div class="final-price">Rp 1.861.200</div>
+                    <button class="btn">Pilih</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="booking-panel">
+            <div class="panel-header">
+                <h2>Langkah 3 dari 3</h2>
+                <h1>Detail Pembayaran</h1>
+            </div>
+
+            <div class="payment-summary-card">
+                <img src="https://via.placeholder.com/300x180/cccccc/969696?text=Gambar+Kamar" alt="Ringkasan Kamar">
+                <div class="payment-summary-card-content">
+                    <h3>Kamar Delux dengan Tempat Tidur King</h3>
+                    <div class="price-info">
+                        Rp. 2.081.200
+                        <span>termasuk Sarapan dan Pajak</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="booking-panel">
+            <form class="payment-form">
+                <h3>Pembayaran</h3>
+                <div class="form-group">
+                    <label for="card-number">Nomor Kartu</label>
+                    <input type="text" id="card-number" placeholder="xxxx xxxx xxxx xxxx">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="exp-month">Bulan</label>
+                        <select id="exp-month">
+                            <option value="">Bulan</option>
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="12">12</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="exp-year">Tahun</label>
+                        <select id="exp-year">
+                            <option value="">Tahun</option>
+                            <option value="2025">2025</option>
+                            <option value="2026">2026</option>
+                            <option value="2030">2030</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="first-name">Nama Depan</label>
+                        <input type="text" id="first-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Nama Belakang</label>
+                        <input type="text" id="last-name">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="email@example.com">
+                </div>
+
+                <h3>Detail Tamu</h3>
+                <div class="form-group">
+                    <label for="phone">Telpon</label>
+                    <input type="text" id="phone">
+                </div>
+                 <div class="form-group">
+                    <label for="country">Negara/Wilayah</label>
+                    <select id="country">
+                        <option value="ID">Indonesia</option>
+                        <option value="SG">Singapura</option>
+                        <option value="MY">Malaysia</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="address">Alamat</label>
+                    <input type="text" id="address">
+                </div>
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="terms">
+                    <label for="terms">
+                        Dengan memilih "Pesan Reservasi", saya menyetujui <a href="#">Syarat dan Ketentuan</a>, <a href="#">Kebijakan Privasi</a>, dan menyetujui bahwa Hotel Uniku Serenity Resort dapat menagih kartu kredit saya...
+                    </label>
+                </div>
+                
+                <button type="submit" class="btn submit-btn">Reservasi Pemesanan</button>
+            </form>
+        </div>
+
+    </div>
+
+</body>
+</html>
