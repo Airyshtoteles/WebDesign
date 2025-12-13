@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Tambah Fasilitas</title>
+    <link rel="stylesheet" href="<?= base_url('css/admin-style.css') ?>">
+</head>
+<body>
+    <div class="form-container">
+        <form action="<?= base_url('admin/fasilitas/store') ?>" method="POST">
+            <h2>Form Tambah Fasilitas</h2>
+            
+            <div class="form-group">
+                <label for="id_fasilitas">ID Fasilitas</label>
+                <input type="text" id="id_fasilitas" name="id_fasilitas" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="nama_fasilitas">Nama Fasilitas</label>
+                <input type="text" id="nama_fasilitas" name="nama_fasilitas" placeholder="Contoh: Kolam Renang" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="deskripsi_fasilitas">Deskripsi Fasilitas</label>
+                <textarea id="deskripsi_fasilitas" name="deskripsi_fasilitas" placeholder="Deskripsi singkat tentang fasilitas"></textarea>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="harga_weekend">Harga Weekend</label>
+                    <input type="number" id="harga_weekend" name="harga_weekend" min="0" value="0">
+                </div>
+                <div class="form-group">
+                    <label for="harga_weekday">Harga Weekday</label>
+                    <input type="number" id="harga_weekday" name="harga_weekday" min="0" value="0">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="kuota">Kuota</label>
+                <input type="number" id="kuota" name="kuota" min="0" value="0">
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="jam_buka">Jam Buka</label>
+                    <input type="time" id="jam_buka" name="jam_buka">
+                </div>
+                <div class="form-group">
+                    <label for="jam_tutup">Jam Tutup</label>
+                    <input type="time" id="jam_tutup" name="jam_tutup">
+                </div>
+            </div>
+            
+            <button type="submit" class="btn-submit">Simpan Fasilitas</button>
+        </form>
+    </div>
+</body>
+</html>
