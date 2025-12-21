@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Tentang UNIKU Serenity Hotel</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background-color: #fffde7;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    /* Header Hero Section */
+    .hero {
+      position: relative;
+      height: 300px;
+      background-image: url('https://images.unsplash.com/photo-1501117716987-c8e1ecb210c7?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.2));
+      z-index: 0;
+    }
+
+    .hero h1 {
+      position: relative;
+      z-index: 1;
+      font-size: 36px;
+      letter-spacing: 1px;
+      color: #fff;
+      animation: fadeInDown 1s ease;
+    }
+
+    /* Konten utama */
+    .content {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      text-align: justify;
+      line-height: 1.8;
+      background-color: #ffffffb5;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .content h2 {
+      text-align: center;
+      color: darkorange;
+      margin-bottom: 20px;
+      font-size: 26px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      animation: fadeIn 1.2s ease;
+    }
+
+    .content p {
+      color: #444;
+      font-size: 15px;
+      animation: fadeIn 1.5s ease;
+    }
+
+    .quote {
+      text-align: center;
+      font-style: italic;
+      color: #555;
+      margin-top: 25px;
+      font-size: 16px;
+      background-color: #fff8e1;
+      padding: 12px;
+      border-left: 4px solid orange;
+      border-radius: 6px;
+      animation: fadeInUp 1.5s ease;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #fff3cd;
+      padding: 15px 0;
+      color: #555;
+      font-size: 13px;
+      border-top: 1px solid #f0c36d;
+      margin-top: 40px;
+    }
+
+    /* Animasi */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 24px; }
+      .content { margin: 20px; padding: 15px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>UNIKU Serenity Hotel</h1>
+  </div>
+
+  <!-- Konten -->
+  <div class="content">
+    <h2>Tentang Kami</h2>
+    <p>
+      <b>UNIKU Serenity Hotel</b> adalah hotel berbintang empat yang terletak di jantung kota Kuningan.
+      Kami menawarkan perpaduan sempurna antara kenyamanan modern dan sentuhan budaya lokal yang hangat.
+      Dengan desain elegan dan pelayanan penuh keramahan, setiap tamu akan merasakan pengalaman menginap yang tak terlupakan.
+    </p>
+    <p>
+      Hotel ini dilengkapi dengan berbagai fasilitas unggulan seperti kolam renang outdoor yang menawan,
+      restoran dengan menu lokal & internasional, spa relaksasi, serta ruang rapat modern
+      untuk memenuhi kebutuhan tamu bisnis maupun keluarga.
+    </p>
+
+    <div class="quote">
+      “Experience Unparalleled Comfort and Warm Hospitality”
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 UNIKU Serenity Hotel – Kenyamanan, Keanggunan, dan Keistimewaan 🌿
+  </footer>
+
+</body>
+</html>

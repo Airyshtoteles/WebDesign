@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Promo Hotel Serenity</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background-color: #fffde7;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: linear-gradient(90deg, #ff9800, gold);
+      color: white;
+      text-align: center;
+      padding: 25px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+      font-size: 30px;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+
+    .promo-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding: 40px 20px;
+    }
+
+    .promo-card {
+      position: relative;
+      width: 300px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      background-color: white;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .promo-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 18px rgba(0,0,0,0.25);
+    }
+
+    .promo-image {
+      position: relative;
+      width: 100%;
+      height: 180px;
+      overflow: hidden;
+    }
+
+    .promo-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .promo-card:hover img {
+      transform: scale(1.1);
+    }
+
+    .promo-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0));
+    }
+
+    .promo-title {
+      position: absolute;
+      bottom: 10px;
+      left: 15px;
+      color: #fff;
+      font-size: 20px;
+      font-weight: bold;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+    }
+
+    .promo-content {
+      padding: 15px;
+    }
+
+    .promo-content p {
+      color: #555;
+      font-size: 14px;
+      line-height: 1.5;
+      margin: 0 0 10px;
+    }
+
+    .promo-btn {
+      display: inline-block;
+      background-color: darkorange;
+      color: white;
+      text-decoration: none;
+      padding: 8px 15px;
+      border-radius: 8px;
+      font-size: 13px;
+      transition: background-color 0.3s ease;
+    }
+
+    .promo-btn:hover {
+      background-color: #e68900;
+    }
+
+    .promo-footer {
+      text-align: center;
+      color: gray;
+      margin-bottom: 25px;
+      font-size: 14px;
+    }
+
+    footer {
+      background-color: #fff3cd;
+      text-align: center;
+      padding: 15px 0;
+      color: #444;
+      font-size: 13px;
+      border-top: 1px solid #f0c36d;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h2>🌴 Promo Spesial Hotel Serenity 🌟</h2>
+  </header>
+
+  <div class="promo-container">
+    <!-- Weekend Sale -->
+    <div class="promo-card">
+      <div class="promo-image">
+        <img src="https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Weekend Sale">
+        <div class="promo-overlay"></div>
+        <div class="promo-title">Weekend Sale</div>
+      </div>
+      <div class="promo-content">
+        <p>Diskon <b>20%</b> untuk semua tipe kamar setiap akhir pekan.  
+        Nikmati liburan singkat penuh kenyamanan & relaksasi!</p>
+        <a href="#" class="promo-btn">Pesan Sekarang</a>
+      </div>
+    </div>
+
+    <!-- Honeymoon -->
+    <div class="promo-card">
+      <div class="promo-image">
+        <img src=https://images.pexels.com/photos/169193/pexels-photo-169193.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Paket Honeymoon" alt="Paket Honeymoon">
+        <div class="promo-overlay"></div>
+        <div class="promo-title">Paket Honeymoon</div>
+      </div>
+      <div class="promo-content">
+        <p>Rayakan momen romantis dengan <b>dekorasi bunga & sarapan romantis gratis</b>  
+        di kamar mewah tepi kolam.</p>
+        <a href="#" class="promo-btn">Pesan Sekarang</a>
+      </div>
+    </div>
+
+    <!-- Akhir Tahun -->
+    <div class="promo-card">
+      <div class="promo-image">
+        <img src="https://images.pexels.com/photos/2613271/pexels-photo-2613271.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Promo Akhir Tahun">
+        <div class="promo-overlay"></div>
+        <div class="promo-title">Promo Akhir Tahun</div>
+      </div>
+      <div class="promo-content">
+        <p>Menginap <b>3 malam bayar 2 malam!</b>  
+        Dapatkan pengalaman istimewa untuk menutup tahun dengan penuh kenangan.</p>
+        <a href="#" class="promo-btn">Pesan Sekarang</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="promo-footer">
+    Promo berlaku hingga <b>31 Desember 2025</b>.<br>
+    Jangan lewatkan penawaran eksklusif ini!
+  </div>
+
+  <footer>
+    &copy; 2025 Hotel Serenity – Kenyamanan, Keanggunan, dan Keistimewaan 🌺
+  </footer>
+
+</body>
+</html>
