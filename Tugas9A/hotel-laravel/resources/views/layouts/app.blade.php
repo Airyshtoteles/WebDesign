@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>@yield('title', '🏨 UNIKU Serenity Hotel')</title>
+  <style>
+    /* 🌟 RESET */
+    * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
+    body {
+      font-family: "Poppins", "Segoe UI", sans-serif;
+      background: linear-gradient(to bottom right, #fffde7, #fff3cd);
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    /* 🌅 HEADER */
+    header {
+      background: linear-gradient(120deg, #fbc02d, #ff9800);
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      position: relative;
+      overflow: hidden;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('https://images.unsplash.com/photo-1542317854-f9596ae570f0?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      opacity: 0.2;
+      z-index: 0;
+    }
+    header h1, header p {
+      position: relative;
+      z-index: 1;
+    }
+    header h1 {
+      font-size: 2.5em;
+      letter-spacing: 1px;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.4);
+      animation: fadeInDown 1s ease;
+    }
+    header p {
+      font-style: italic;
+      font-size: 1.1em;
+      color: #fff8dc;
+      animation: fadeInUp 1.2s ease;
+    }
+
+    /* 🌟 NAVIGASI */
+    nav {
+      background: linear-gradient(90deg, #ffb300, #f57c00);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      padding: 15px 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1em;
+      padding: 8px 20px;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(4px);
+    }
+    nav a:hover {
+      background: white;
+      color: #f57c00;
+      box-shadow: 0 0 10px rgba(255,255,255,0.6);
+      transform: translateY(-2px);
+    }
+
+    /* 🌟 LAYOUT UTAMA */
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      min-height: 500px;
+      margin: 30px auto;
+      gap: 20px;
+      max-width: 1200px;
+      padding: 0 20px;
+    }
+
+    /* ✨ SIDEBAR */
+    aside {
+      flex: 1 1 250px;
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+    aside:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+    aside h3 {
+      text-align: center;
+      color: #ff9800;
+      margin-bottom: 15px;
+      font-size: 1.2em;
+      border-bottom: 2px solid #ffe082;
+      padding-bottom: 8px;
+    }
+    aside ul { list-style: none; }
+    aside li { margin: 12px 0; }
+    aside a {
+      display: block;
+      padding: 10px;
+      border-radius: 8px;
+      font-weight: 500;
+      color: #444;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    aside a:hover {
+      background: linear-gradient(90deg, #ffe082, #ffd54f);
+      color: #d17b00;
+      transform: translateX(5px);
+    }
+
+    /* 📄 KONTEN */
+    section {
+      flex: 3 1 700px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      padding: 15px;
+      transition: all 0.3s ease;
+    }
+    section:hover {
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+    
+    /* 🌟 FOOTER */
+    footer {
+      background: linear-gradient(120deg, #f57c00, #ef6c00);
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 0.9em;
+      letter-spacing: 0.5px;
+      box-shadow: 0 -3px 10px rgba(0,0,0,0.15);
+    }
+    footer a {
+      color: #fffde7;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 5px;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* 🌈 ANIMASI */
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px);} to { opacity: 1; transform: translateY(0);} }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px);} to { opacity: 1; transform: translateY(0);} }
+
+    /* 📱 RESPONSIF */
+    @media (max-width: 900px) {
+      main { flex-direction: column; }
+      aside, section { width: 100%; }
+      header h1 { font-size: 2em; }
+    }
+  </style>
+  @stack('styles')
+</head>
+<body>
+
+  <!-- 🌅 Header -->
+  <header>
+    <h1>🏨 UNIKU Serenity Hotel</h1>
+    <p>Experience Unparalleled Comfort & Luxury</p>
+  </header>
+
+  <!-- 🧭 Navigasi -->
+  <nav>
+    <a href="{{ url('/') }}">🏠 Dashboard</a>
+    <a href="#">🛏️ Data Kamar</a>
+    <a href="#">🏖️ Fasilitas</a>
+    <a href="#">📋 Pemesanan</a>
+  </nav>
+
+  <!-- 🏠 Layout utama -->
+  <main>
+    <aside>
+      <h3>✨ Menu Tambahan</h3>
+      <ul>
+        <li><a href="#">💸 Promo Spesial</a></li>
+        <li><a href="#">📍 Lokasi & Akses</a></li>
+        <li><a href="#">ℹ️ Tentang Hotel</a></li>
+      </ul>
+    </aside>
+
+    <section>
+      @yield('content')
+    </section>
+  </main>
+
+  <!-- 🌇 Footer -->
+  <footer>
+    <p>© 2025 UNIKU Serenity Hotel — Temukan kami di 
+      <a href="#">🐦 Twitter</a> | 
+      <a href="#">📸 Instagram</a> | 
+      <a href="#">👍 Facebook</a>
+    </p>
+  </footer>
+
+</body>
+</html>

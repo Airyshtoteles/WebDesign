@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Data Pemesanan - UNIKU Serenity Hotel</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background-color: #fffde7;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    /* Header bergambar */
+    header {
+      background: linear-gradient(to right, rgba(255,165,0,0.9), rgba(255,215,0,0.8)),
+        url('https://images.unsplash.com/photo-1542317854-f9596ae570f0?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+      letter-spacing: 1px;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+      animation: fadeInDown 1s ease;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 16px;
+      color: #fff8dc;
+      animation: fadeIn 1.2s ease;
+    }
+
+    /* Container tabel */
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background-color: white;
+      padding: 20px 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      animation: fadeInUp 1s ease;
+    }
+
+    h2 {
+      text-align: center;
+      color: darkorange;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    th, td {
+      text-align: center;
+      padding: 12px 10px;
+    }
+
+    th {
+      background: linear-gradient(to right, gold, orange);
+      color: white;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #fff8e1;
+    }
+
+    tr:nth-child(odd) {
+      background-color: #fffdf0;
+    }
+
+    tr:hover {
+      background-color: #ffe082;
+      transform: scale(1.01);
+      transition: all 0.2s ease;
+    }
+
+    td {
+      color: #444;
+      font-size: 15px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 15px;
+      background-color: #fff3cd;
+      color: #555;
+      border-top: 1px solid #f0c36d;
+      font-size: 13px;
+    }
+
+    /* Animasi */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      th, td { font-size: 13px; padding: 8px; }
+      header h1 { font-size: 26px; }
+      .container { padding: 15px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Data Pemesanan</h1>
+    <p>UNIKU Serenity Hotel 🏨 | Catatan Reservasi Tamu</p>
+  </header>
+
+  <div class="container">
+    <h2>Daftar Pemesanan</h2>
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Tanggal Pesan</th>
+        <th>Nama Pemesan</th>
+        <th>Jenis Kamar</th>
+        <th>Check-In</th>
+        <th>Check-Out</th>
+        <t
